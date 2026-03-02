@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turmeric Products — CM Trading & Exports</title>
+    <meta name="description" content="Premium quality turmeric from Erode, India's turmeric hub. Polished turmeric fingers, dried turmeric, turmeric powder, and high curcumin varieties.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Product Page Specific Styles */
+        .product-page {
+            min-height: 100vh;
+            background: var(--bg);
+            padding: 2rem;
+        }
+        
+        .product-page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-top: 2rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--grey-1);
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+        
+        .back-link:hover {
+            color: var(--yellow);
+            transform: translateX(-5px);
+        }
+        
+        .product-page-title {
+            font-family: var(--font-head);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-page-subtitle {
+            font-size: 1.2rem;
+            color: var(--grey-1);
+            margin-bottom: 1rem;
+        }
+        
+        .product-badge-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--yellow-soft);
+            color: var(--yellow);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid rgba(245, 197, 24, 0.2);
+        }
+        
+        .product-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .product-description {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .product-description h2 {
+            font-family: var(--font-head);
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+        
+        .product-description p {
+            color: var(--grey-1);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .product-gallery {
+            margin-bottom: 3rem;
+        }
+        
+        .gallery-title {
+            font-family: var(--font-head);
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--yellow);
+            box-shadow: 0 10px 30px rgba(245, 197, 24, 0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 320px;
+            object-fit: contain;
+            display: block;
+            background: #000;
+            padding: 1rem;
+        }
+        
+        .gallery-caption {
+            padding: 1.2rem;
+            background: var(--bg-card-2);
+        }
+        
+        .gallery-caption h3 {
+            font-family: var(--font-head);
+            font-size: 1.1rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        
+        .gallery-caption p {
+            color: var(--grey-1);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .product-specifications {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .product-specifications h2 {
+            font-family: var(--font-head);
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .spec-item {
+            background: var(--bg-card-2);
+            padding: 1.5rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .spec-item h4 {
+            color: var(--yellow);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .spec-item p {
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+        }
+        
+        .cta-section h2 {
+            font-family: var(--font-head);
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            color: var(--grey-1);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+        
+        .cta-btn-primary {
+            background: var(--yellow);
+            color: #000;
+        }
+        
+        .cta-btn-primary:hover {
+            background: var(--yellow-dim);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(245, 197, 24, 0.3);
+        }
+        
+        .cta-btn-secondary {
+            background: var(--bg-card-2);
+            color: var(--white);
+            border: 1px solid var(--border-light);
+        }
+        
+        .cta-btn-secondary:hover {
+            border-color: var(--yellow);
+            color: var(--yellow);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .product-page {
+                padding: 1.5rem;
+            }
+            
+            .product-page-title {
+                font-size: 2rem;
+            }
+            
+            .product-page-subtitle {
+                font-size: 1rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-description,
+            .product-specifications,
+            .cta-section {
+                padding: 1.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .cta-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .product-page {
+                padding: 1rem;
+            }
+            
+            .product-page-title {
+                font-size: 1.75rem;
+            }
+            
+            .product-page-subtitle {
+                font-size: 0.95rem;
+            }
+            
+            .product-description h2,
+            .product-specifications h2 {
+                font-size: 1.4rem;
+            }
+            
+            .gallery-item img {
+                height: 250px;
+            }
+            
+            .gallery-title,
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="product-page">
+        <div class="product-content">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+            
+            <div class="product-page-header">
+                <h1 class="product-page-title">Premium Turmeric</h1>
+                <p class="product-page-subtitle">
+                    <i class="fas fa-map-pin"></i> Sourced from Erode — India's Turmeric Hub
+                </p>
+                <span class="product-badge-large">
+                    <i class="fas fa-star"></i> Featured Product
+                </span>
+            </div>
+            
+            <div class="product-description">
+                <h2>About Our Turmeric</h2>
+                <p>
+                    Erode is widely recognized as India's turmeric capital, producing the finest quality turmeric known for its vibrant color, 
+                    high curcumin content, and superior taste. Our turmeric products are sourced directly from verified farmers and processors 
+                    in the Erode region, ensuring authenticity and premium quality. We offer a complete range of turmeric products, from raw 
+                    turmeric fingers to finely milled powder, all meeting international quality standards and export requirements.
+                </p>
+            </div>
+            
+            <div class="product-gallery">
+                <h2 class="gallery-title">Product Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=800&h=600&fit=crop" alt="Turmeric Fingers">
+                        <div class="gallery-caption">
+                            <h3>Polished Turmeric Fingers</h3>
+                            <p>Premium quality whole turmeric rhizomes, carefully cleaned and polished for export standards.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1598543444617-e54c93a27e75?w=800&h=600&fit=crop" alt="Dried Turmeric">
+                        <div class="gallery-caption">
+                            <h3>Dried Turmeric</h3>
+                            <p>Sun-dried turmeric with natural golden color and high curcumin content.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1615485500695-d2f0f0df3e32?w=800&h=600&fit=crop" alt="Turmeric Powder">
+                        <div class="gallery-caption">
+                            <h3>Turmeric Powder</h3>
+                            <p>Finely ground turmeric powder, vibrant in color with exceptional purity and aroma.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1599909533522-a1e42f8815f8?w=800&h=600&fit=crop" alt="Fresh Turmeric">
+                        <div class="gallery-caption">
+                            <h3>Fresh Turmeric Roots</h3>
+                            <p>Farm-fresh turmeric roots harvested at peak maturity for maximum curcumin levels.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1594638229938-3b84a8f6cd3e?w=800&h=600&fit=crop" alt="Turmeric Packaging">
+                        <div class="gallery-caption">
+                            <h3>Export Packaging</h3>
+                            <p>Professional packaging available in bulk quantities, meeting international export standards.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1600503608808-3cb7d91b6c94?w=800&h=600&fit=crop" alt="Turmeric Farm">
+                        <div class="gallery-caption">
+                            <h3>Direct from Farms</h3>
+                            <p>Sourced from trusted farmers in the Erode region with sustainable farming practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-specifications">
+                <h2>Product Specifications</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h4>Origin</h4>
+                        <p>Erode, Tamil Nadu, India</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Curcumin Content</h4>
+                        <p>2.5% - 5.5% (High Grade)</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Available Forms</h4>
+                        <p>Fingers, Dried, Powder</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Moisture Content</h4>
+                        <p>Max 10-12%</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Packaging Options</h4>
+                        <p>25kg, 50kg bags or custom</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Quality Standards</h4>
+                        <p>ISO, FSSAI Certified</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Ready to Order?</h2>
+                <p>Get in touch for pricing, samples, and custom requirements</p>
+                <div class="cta-buttons">
+                    <a href="mailto:chandruselvam1012@gmail.com" class="cta-btn cta-btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Send Email
+                    </a>
+                    <a href="tel:+916369431485" class="cta-btn cta-btn-secondary">
+                        <i class="fas fa-phone"></i>
+                        Call Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

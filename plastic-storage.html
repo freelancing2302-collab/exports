@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic Storage Solutions — CM Trading & Exports</title>
+    <meta name="description" content="Premium quality plastic water storage tanks and industrial containers from verified manufacturers. Customized capacity tanks for domestic and industrial use.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Product Page Specific Styles */
+        .product-page {
+            min-height: 100vh;
+            background: var(--bg);
+            padding: 2rem;
+        }
+        
+        .product-page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-top: 2rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--grey-1);
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+        
+        .back-link:hover {
+            color: var(--yellow);
+            transform: translateX(-5px);
+        }
+        
+        .product-page-title {
+            font-family: var(--font-head);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-page-subtitle {
+            font-size: 1.2rem;
+            color: var(--grey-1);
+            margin-bottom: 1rem;
+        }
+        
+        .product-badge-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--yellow-soft);
+            color: var(--yellow);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid rgba(245, 197, 24, 0.2);
+        }
+        
+        .product-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .product-description {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .product-description h2 {
+            font-family: var(--font-head);
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+        
+        .product-description p {
+            color: var(--grey-1);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .product-gallery {
+            margin-bottom: 3rem;
+        }
+        
+        .gallery-title {
+            font-family: var(--font-head);
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--yellow);
+            box-shadow: 0 10px 30px rgba(245, 197, 24, 0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 320px;
+            object-fit: contain;
+            display: block;
+            background: #000;
+            padding: 1rem;
+        }
+        
+        .gallery-caption {
+            padding: 1.2rem;
+            background: var(--bg-card-2);
+        }
+        
+        .gallery-caption h3 {
+            font-family: var(--font-head);
+            font-size: 1.1rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        
+        .gallery-caption p {
+            color: var(--grey-1);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .product-specifications {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .product-specifications h2 {
+            font-family: var(--font-head);
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .spec-item {
+            background: var(--bg-card-2);
+            padding: 1.5rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .spec-item h4 {
+            color: var(--yellow);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .spec-item p {
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+        }
+        
+        .cta-section h2 {
+            font-family: var(--font-head);
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            color: var(--grey-1);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+        
+        .cta-btn-primary {
+            background: var(--yellow);
+            color: #000;
+        }
+        
+        .cta-btn-primary:hover {
+            background: var(--yellow-dim);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(245, 197, 24, 0.3);
+        }
+        
+        .cta-btn-secondary {
+            background: var(--bg-card-2);
+            color: var(--white);
+            border: 1px solid var(--border-light);
+        }
+        
+        .cta-btn-secondary:hover {
+            border-color: var(--yellow);
+            color: var(--yellow);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .product-page {
+                padding: 1.5rem;
+            }
+            
+            .product-page-title {
+                font-size: 2rem;
+            }
+            
+            .product-page-subtitle {
+                font-size: 1rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-description,
+            .product-specifications,
+            .cta-section {
+                padding: 1.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .cta-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .product-page {
+                padding: 1rem;
+            }
+            
+            .product-page-title {
+                font-size: 1.75rem;
+            }
+            
+            .product-page-subtitle {
+                font-size: 0.95rem;
+            }
+            
+            .product-description h2,
+            .product-specifications h2 {
+                font-size: 1.4rem;
+            }
+            
+            .gallery-item img {
+                height: 250px;
+            }
+            
+            .gallery-title,
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="product-page">
+        <div class="product-content">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+            
+            <div class="product-page-header">
+                <h1 class="product-page-title">Plastic Storage Solutions</h1>
+                <p class="product-page-subtitle">
+                    <i class="fas fa-certificate"></i> Verified Manufacturers
+                </p>
+                <span class="product-badge-large">
+                    <i class="fas fa-industry"></i> Industrial Quality
+                </span>
+            </div>
+            
+            <div class="product-description">
+                <h2>About Our Storage Solutions</h2>
+                <p>
+                    We source high-quality plastic storage solutions from verified manufacturers across India, specializing in water 
+                    storage tanks and industrial containers. Our product range includes various capacity tanks suitable for both 
+                    domestic and industrial applications. All our plastic storage products are made from food-grade, UV-resistant 
+                    materials that ensure durability and long service life. We offer customized capacity options and can coordinate 
+                    bulk orders with consistent quality standards. These products meet national and international quality certifications 
+                    for safe water storage and industrial use.
+                </p>
+            </div>
+            
+            <div class="product-gallery">
+                <h2 class="gallery-title">Product Range</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/tanks/tank-1.jpeg" alt="Water Storage Tanks">
+                        <div class="gallery-caption">
+                            <h3>Water Storage Tanks</h3>
+                            <p>Durable plastic water tanks available in multiple capacities from 500L to 10,000L.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="images/tanks/tank-2.jpeg" alt="Industrial Tanks">
+                        <div class="gallery-caption">
+                            <h3>Industrial Storage Tanks</h3>
+                            <p>Heavy-duty tanks for industrial liquid storage with chemical resistance properties.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="images/tanks/tank-3.jpeg" alt="Plastic Containers">
+                        <div class="gallery-caption">
+                            <h3>Industrial Containers</h3>
+                            <p>Versatile plastic containers for various industrial storage and transportation needs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="images/tanks/tank-4.jpeg" alt="Custom Tanks">
+                        <div class="gallery-caption">
+                            <h3>Customized Capacity Tanks</h3>
+                            <p>Tailored solutions with custom capacities and configurations for specific requirements.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="images/tanks/tank-5.jpeg" alt="Tank Installation">
+                        <div class="gallery-caption">
+                            <h3>Installation Ready</h3>
+                            <p>Complete with fittings and accessories for easy installation and maintenance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="images/tanks/tank-6.jpeg" alt="Manufacturing">
+                        <div class="gallery-caption">
+                            <h3>Quality Manufacturing</h3>
+                            <p>Sourced from ISO-certified manufacturers using virgin plastic materials.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-specifications">
+                <h2>Product Specifications</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h4>Material Type</h4>
+                        <p>Food-grade Virgin Plastic</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Capacity Range</h4>
+                        <p>500L to 10,000L+</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>UV Protection</h4>
+                        <p>UV Stabilized</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Durability</h4>
+                        <p>10+ Years Service Life</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Customization</h4>
+                        <p>Available on Request</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Certifications</h4>
+                        <p>ISI, ISO Certified</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Ready to Order?</h2>
+                <p>Get in touch for pricing, specifications, and bulk order inquiries</p>
+                <div class="cta-buttons">
+                    <a href="mailto:chandruselvam1012@gmail.com" class="cta-btn cta-btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Send Email
+                    </a>
+                    <a href="tel:+916369431485" class="cta-btn cta-btn-secondary">
+                        <i class="fas fa-phone"></i>
+                        Call Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

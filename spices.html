@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Spices — CM Trading & Exports</title>
+    <meta name="description" content="Premium quality Indian spices sourced directly from farmers and processors. Chilli, coriander, black pepper, and more in whole and powdered forms.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Product Page Specific Styles */
+        .product-page {
+            min-height: 100vh;
+            background: var(--bg);
+            padding: 2rem;
+        }
+        
+        .product-page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-top: 2rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--grey-1);
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+        
+        .back-link:hover {
+            color: var(--yellow);
+            transform: translateX(-5px);
+        }
+        
+        .product-page-title {
+            font-family: var(--font-head);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-page-subtitle {
+            font-size: 1.2rem;
+            color: var(--grey-1);
+            margin-bottom: 1rem;
+        }
+        
+        .product-badge-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--yellow-soft);
+            color: var(--yellow);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid rgba(245, 197, 24, 0.2);
+        }
+        
+        .product-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .product-description {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .product-description h2 {
+            font-family: var(--font-head);
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+        
+        .product-description p {
+            color: var(--grey-1);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .product-gallery {
+            margin-bottom: 3rem;
+        }
+        
+        .gallery-title {
+            font-family: var(--font-head);
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--yellow);
+            box-shadow: 0 10px 30px rgba(245, 197, 24, 0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 320px;
+            object-fit: contain;
+            display: block;
+            background: #000;
+            padding: 1rem;
+        }
+        
+        .gallery-caption {
+            padding: 1.2rem;
+            background: var(--bg-card-2);
+        }
+        
+        .gallery-caption h3 {
+            font-family: var(--font-head);
+            font-size: 1.1rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        
+        .gallery-caption p {
+            color: var(--grey-1);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .product-specifications {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .product-specifications h2 {
+            font-family: var(--font-head);
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .spec-item {
+            background: var(--bg-card-2);
+            padding: 1.5rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-light);
+        }
+        
+        .spec-item h4 {
+            color: var(--yellow);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .spec-item p {
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+        }
+        
+        .cta-section h2 {
+            font-family: var(--font-head);
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            color: var(--grey-1);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+        
+        .cta-btn-primary {
+            background: var(--yellow);
+            color: #000;
+        }
+        
+        .cta-btn-primary:hover {
+            background: var(--yellow-dim);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(245, 197, 24, 0.3);
+        }
+        
+        .cta-btn-secondary {
+            background: var(--bg-card-2);
+            color: var(--white);
+            border: 1px solid var(--border-light);
+        }
+        
+        .cta-btn-secondary:hover {
+            border-color: var(--yellow);
+            color: var(--yellow);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .product-page {
+                padding: 1.5rem;
+            }
+            
+            .product-page-title {
+                font-size: 2rem;
+            }
+            
+            .product-page-subtitle {
+                font-size: 1rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-description,
+            .product-specifications,
+            .cta-section {
+                padding: 1.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .cta-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .product-page {
+                padding: 1rem;
+            }
+            
+            .product-page-title {
+                font-size: 1.75rem;
+            }
+            
+            .product-page-subtitle {
+                font-size: 0.95rem;
+            }
+            
+            .product-description h2,
+            .product-specifications h2 {
+                font-size: 1.4rem;
+            }
+            
+            .gallery-item img {
+                height: 250px;
+            }
+            
+            .gallery-title,
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="product-page">
+        <div class="product-content">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+            
+            <div class="product-page-header">
+                <h1 class="product-page-title">Premium Indian Spices</h1>
+                <p class="product-page-subtitle">
+                    <i class="fas fa-users"></i> Direct from Farmers & Processors
+                </p>
+                <span class="product-badge-large">
+                    <i class="fas fa-pepper-hot"></i> Authentic Indian Quality
+                </span>
+            </div>
+            
+            <div class="product-description">
+                <h2>About Our Spices</h2>
+                <p>
+                    India is renowned worldwide for its diverse range of aromatic spices that add flavor, color, and health benefits 
+                    to cuisines globally. We source premium quality spices directly from trusted farmers and processing units across 
+                    various spice-producing regions of India. Our spice portfolio includes chilli, coriander, black pepper, and more, 
+                    available in both whole and powdered forms. All our spices undergo strict quality checks and meet international 
+                    food safety standards, ensuring you receive products with exceptional aroma, flavor, and purity.
+                </p>
+            </div>
+            
+            <div class="product-gallery">
+                <h2 class="gallery-title">Spice Varieties</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1583486520803-808b0e1e5f80?w=800&h=600&fit=crop" alt="Red Chilli">
+                        <div class="gallery-caption">
+                            <h3>Red Chilli (Dried & Powder)</h3>
+                            <p>Premium quality dried red chillies and finely ground chilli powder with intense color and heat.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1596040033229-a0b4bd9ffc36?w=800&h=600&fit=crop" alt="Black Pepper">
+                        <div class="gallery-caption">
+                            <h3>Black Pepper</h3>
+                            <p>Whole black peppercorns and ground pepper with bold flavor and aromatic properties.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1596547609652-66d2e06e6f25?w=800&h=600&fit=crop" alt="Coriander">
+                        <div class="gallery-caption">
+                            <h3>Coriander Seeds & Powder</h3>
+                            <p>Fresh coriander seeds and powder with natural aroma and citrusy notes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1599909533522-a1e42f8815f8?w=800&h=600&fit=crop" alt="Mixed Spices">
+                        <div class="gallery-caption">
+                            <h3>Mixed Indian Spices</h3>
+                            <p>Authentic blends of traditional Indian spice mixes for various culinary uses.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1505253468034-514d2507d914?w=800&h=600&fit=crop" alt="Whole Spices">
+                        <div class="gallery-caption">
+                            <h3>Whole Spices Collection</h3>
+                            <p>Complete range of whole spices including cumin, cardamom, cloves, and cinnamon.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1599909533513-aa70ca486a82?w=800&h=600&fit=crop" alt="Spice Powder">
+                        <div class="gallery-caption">
+                            <h3>Ground Spice Powders</h3>
+                            <p>Freshly ground spice powders packaged for maximum aroma retention and shelf life.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-specifications">
+                <h2>Product Specifications</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h4>Origin Regions</h4>
+                        <p>Multiple States Across India</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Available Forms</h4>
+                        <p>Whole & Powdered</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Quality Grade</h4>
+                        <p>Export Quality</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Moisture Content</h4>
+                        <p>As per international standards</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Packaging Options</h4>
+                        <p>Customized bulk packaging</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Certifications</h4>
+                        <p>FSSAI, Spice Board Certified</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Ready to Order?</h2>
+                <p>Get in touch for pricing, samples, and custom requirements</p>
+                <div class="cta-buttons">
+                    <a href="mailto:chandruselvam1012@gmail.com" class="cta-btn cta-btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Send Email
+                    </a>
+                    <a href="tel:+916369431485" class="cta-btn cta-btn-secondary">
+                        <i class="fas fa-phone"></i>
+                        Call Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

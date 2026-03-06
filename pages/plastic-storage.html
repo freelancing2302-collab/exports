@@ -6,68 +6,68 @@
     <title>Plastic Drums &amp; Tanks — CM Trading &amp; Exports</title>
     <meta name="description" content="Premium plastic water storage tanks and industrial drums &amp; barrels from verified manufacturers in India. Custom capacities, bulk export.">
     <meta name="keywords" content="plastic water tanks india, industrial drums barrels export, storage tanks manufacturers, plastic drums supplier">
-    <meta name="author" content="Chandra Mohan (Chandru)">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://exports-portfolio.vercel.app/plastic-storage.html">
+    <link rel="canonical" href="https://exports-portfolio.vercel.app/pages/plastic-storage.html">
     <meta property="og:type" content="product">
     <meta property="og:title" content="Plastic Drums &amp; Tanks — CM Trading &amp; Exports">
     <meta property="og:description" content="Premium plastic tanks and industrial drums. Verified manufacturers, custom capacities, bulk export.">
     <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
-    <link rel="apple-touch-icon" href="../assets/icons/favicon.svg">
     <link rel="manifest" href="../config/manifest.json">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="theme-color" content="#0B1D3A">
+    <link rel="stylesheet" href="../css/product-page.css">
     <style>
         /* Product Page Base */
         .product-page{min-height:100vh;background:var(--bg);padding:2rem}
         .product-content{max-width:1200px;margin:0 auto}
 
-        .back-link{display:inline-flex;align-items:center;gap:.5rem;color:var(--grey-1);text-decoration:none;font-size:.95rem;margin-bottom:2rem;transition:var(--transition)}
-        .back-link:hover{color:var(--red);transform:translateX(-5px)}
+        .back-link{display:inline-flex;align-items:center;gap:.5rem;color:var(--grey-1);text-decoration:none;font-size:.95rem;margin-bottom:2rem;transition:color .2s}
+        .back-link:hover{color:var(--saffron);transform:translateX(-5px)}
 
         /* Page Header */
         .product-page-header{text-align:center;margin-bottom:3rem;padding-top:2rem}
-        .product-page-title{font-family:var(--font-head);font-size:3rem;font-weight:700;color:var(--white);margin-bottom:.5rem}
+        .product-page-title{font-family:var(--font-head);font-size:3rem;font-weight:700;color:var(--dark);margin-bottom:.5rem}
         .product-page-subtitle{font-size:1.1rem;color:var(--grey-1);margin-bottom:1rem}
-        .product-badge-large{display:inline-flex;align-items:center;gap:.5rem;background:var(--red-soft);color:var(--red);padding:.5rem 1.2rem;border-radius:50px;font-weight:600;font-size:.9rem;border:1px solid rgba(232,49,42,.2)}
+        .product-badge-large{display:inline-flex;align-items:center;gap:.5rem;background:var(--saffron-soft);color:var(--saffron);padding:.5rem 1.2rem;border-radius:50px;font-weight:600;font-size:.9rem;border:1px solid rgba(26,95,196,.15)}
 
         /* Section tabs/nav */
         .product-section-nav{display:flex;gap:.75rem;margin-bottom:2.5rem;border-bottom:1px solid var(--border);padding-bottom:0}
-        .section-tab{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;font-family:var(--font-head);font-size:.88rem;font-weight:600;color:var(--grey-1);text-decoration:none;border-bottom:3px solid transparent;transition:var(--transition);cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;margin-bottom:-1px}
-        .section-tab:hover{color:var(--white)}
-        .section-tab.active{color:var(--red);border-bottom-color:var(--red)}
+        .section-tab{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;font-family:var(--font-head);font-size:.88rem;font-weight:600;color:var(--grey-1);text-decoration:none;border-bottom:3px solid transparent;transition:color .2s,border-color .2s;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;margin-bottom:-1px}
+        .section-tab:hover{color:var(--dark)}
+        .section-tab.active{color:var(--saffron);border-bottom-color:var(--saffron)}
         .section-tab i{font-size:.9rem}
 
         /* Each product section */
         .product-section{margin-bottom:4rem}
-        .product-section-header{display:flex;align-items:flex-start;gap:1.5rem;margin-bottom:2rem;padding:1.8rem 2rem;background:var(--bg-card);border:1px solid var(--border);border-top:3px solid var(--red);border-radius:var(--radius)}
-        .psh-icon{width:56px;height:56px;background:var(--red-soft);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--red);flex-shrink:0}
-        .psh-body h2{font-family:var(--font-head);font-size:1.7rem;font-weight:700;color:var(--white);margin-bottom:.4rem}
+        .product-section-header{display:flex;align-items:flex-start;gap:1.5rem;margin-bottom:2rem;padding:1.8rem 2rem;background:var(--bg-card);border:1px solid var(--border);border-top:3px solid var(--saffron);border-radius:var(--radius)}
+        .psh-icon{width:56px;height:56px;background:var(--saffron-soft);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--saffron);flex-shrink:0}
+        .psh-body h2{font-family:var(--font-head);font-size:1.7rem;font-weight:700;color:var(--dark);margin-bottom:.4rem}
         .psh-body p{color:var(--grey-1);font-size:.92rem;line-height:1.7;margin:0}
-        .psh-badge{display:inline-flex;align-items:center;gap:.35rem;background:var(--red);color:#fff;font-size:.6rem;font-weight:700;padding:.2rem .65rem;border-radius:2px;text-transform:uppercase;letter-spacing:.5px;margin-left:.75rem;vertical-align:middle}
+        .psh-badge{display:inline-flex;align-items:center;gap:.35rem;background:var(--saffron);color:#fff;font-size:.6rem;font-weight:700;padding:.2rem .65rem;border-radius:2px;text-transform:uppercase;letter-spacing:.5px;margin-left:.75rem;vertical-align:middle}
 
         /* Gallery */
-        .gallery-title{font-family:var(--font-head);font-size:1.25rem;font-weight:700;color:var(--white);margin-bottom:1.2rem;display:flex;align-items:center;gap:.6rem}
+        .gallery-title{font-family:var(--font-head);font-size:1.25rem;font-weight:700;color:var(--dark);margin-bottom:1.2rem;display:flex;align-items:center;gap:.6rem}
         .gallery-title::after{content:'';flex:1;height:1px;background:var(--border)}
         .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-bottom:2.5rem}
-        .gallery-item{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:var(--transition)}
-        .gallery-item:hover{transform:translateY(-5px);border-color:var(--red);box-shadow:0 10px 30px rgba(232,49,42,.1)}
-        .gallery-item img{width:100%;height:260px;object-fit:contain;display:block;background:var(--bg-card-2);padding:1rem}
-        .gallery-caption{padding:1rem 1.2rem;background:var(--bg-card-2)}
-        .gallery-caption h3{font-family:var(--font-head);font-size:.97rem;color:var(--white);margin-bottom:.3rem}
+        .gallery-item{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
+        .gallery-item:hover{transform:translateY(-5px);border-color:var(--saffron);box-shadow:0 10px 30px rgba(26,95,196,.1)}
+        .gallery-item img{width:100%;height:260px;object-fit:contain;display:block;background:var(--bg-alt);padding:1rem}
+        .gallery-caption{padding:1rem 1.2rem;background:var(--bg-alt)}
+        .gallery-caption h3{font-family:var(--font-head);font-size:.97rem;color:var(--dark);margin-bottom:.3rem}
         .gallery-caption p{color:var(--grey-1);font-size:.82rem;line-height:1.55}
 
         /* Specs */
         .product-specifications{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;margin-bottom:2rem}
-        .product-specifications h3{font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:1.2rem;display:flex;align-items:center;gap:.5rem}
-        .product-specifications h3 i{color:var(--red)}
+        .product-specifications h3{font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--dark);margin-bottom:1.2rem;display:flex;align-items:center;gap:.5rem}
+        .product-specifications h3 i{color:var(--saffron)}
         .specs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-        .spec-item{background:var(--bg-card-2);padding:1.2rem;border-radius:var(--radius-sm);border:1px solid var(--border-light)}
-        .spec-item h4{color:var(--red);font-size:.75rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.4rem;font-weight:600}
-        .spec-item p{color:var(--white);font-size:1rem;font-weight:500}
+        .spec-item{background:var(--bg-alt);padding:1.2rem;border-radius:var(--radius-sm);border:1px solid var(--border)}
+        .spec-item h4{color:var(--saffron);font-size:.75rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.4rem;font-weight:600}
+        .spec-item p{color:var(--dark);font-size:1rem;font-weight:500}
 
         /* Section divider */
         .section-divider{display:flex;align-items:center;gap:1rem;margin:3rem 0;color:var(--grey-2);font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px}
@@ -75,14 +75,14 @@
 
         /* CTA */
         .cta-section{text-align:center;padding:3rem 2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:2rem}
-        .cta-section h2{font-family:var(--font-head);font-size:2rem;color:var(--white);margin-bottom:1rem}
+        .cta-section h2{font-family:var(--font-head);font-size:2rem;color:var(--dark);margin-bottom:1rem}
         .cta-section p{color:var(--grey-1);font-size:1.05rem;margin-bottom:2rem}
         .cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-        .cta-btn{display:inline-flex;align-items:center;gap:.7rem;padding:1rem 2rem;border-radius:var(--radius-sm);font-weight:600;text-decoration:none;transition:var(--transition);font-size:1rem}
-        .cta-btn-primary{background:var(--red);color:#fff}
-        .cta-btn-primary:hover{background:var(--red-dim);transform:translateY(-2px);box-shadow:0 10px 25px rgba(232,49,42,.3)}
-        .cta-btn-secondary{background:var(--bg-card-2);color:var(--white);border:1px solid var(--border-light)}
-        .cta-btn-secondary:hover{border-color:var(--red);color:var(--red);transform:translateY(-2px)}
+        .cta-btn{display:inline-flex;align-items:center;gap:.7rem;padding:1rem 2rem;border-radius:var(--radius-sm);font-weight:600;text-decoration:none;transition:all .2s;font-size:1rem}
+        .cta-btn-primary{background:var(--wa-green);color:#fff}
+        .cta-btn-primary:hover{background:#1eb553;transform:translateY(-2px);box-shadow:0 10px 25px rgba(37,211,102,.3)}
+        .cta-btn-secondary{background:var(--bg-alt);color:var(--dark);border:1px solid var(--border)}
+        .cta-btn-secondary:hover{border-color:var(--saffron);color:var(--saffron);transform:translateY(-2px)}
 
         @media(max-width:768px){
             .product-page{padding:1.5rem}
@@ -102,12 +102,68 @@
     </style>
 </head>
 <body>
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announce-bar">
+        <div class="announce-ticker">
+            <div class="announce-ticker-inner">
+                <span>&#127802; Plastic Drums 80L&ndash;300L</span><span class="announce-dot">&#9679;</span>
+                <span>Water Storage Tanks 500L&ndash;10000L</span><span class="announce-dot">&#9679;</span>
+                <span>Food-Grade &amp; Chemical-Grade</span><span class="announce-dot">&#9679;</span>
+                <span>Underground Tanks</span><span class="announce-dot">&#9679;</span>
+                <span>Custom Branding Available</span><span class="announce-dot">&#9679;</span>
+                <span>Bulk Orders Welcome</span><span class="announce-dot">&#9679;</span>
+                <span>&#127802; Plastic Drums 80L&ndash;300L</span><span class="announce-dot">&#9679;</span>
+                <span>Water Storage Tanks 500L&ndash;10000L</span><span class="announce-dot">&#9679;</span>
+                <span>Food-Grade &amp; Chemical-Grade</span><span class="announce-dot">&#9679;</span>
+                <span>Underground Tanks</span><span class="announce-dot">&#9679;</span>
+                <span>Custom Branding Available</span><span class="announce-dot">&#9679;</span>
+                <span>Bulk Orders Welcome</span><span class="announce-dot">&#9679;</span>
+            </div>
+        </div>
+        <div class="announce-right">
+            <span class="announce-contact"><i class="fas fa-phone"></i> +91 6369431485</span>
+            <span class="announce-iec">IEC Registered</span>
+        </div>
+    </div>
+
+    <!-- SITE HEADER -->
+    <header class="site-header" id="siteHeader">
+        <a href="../index.html" class="header-logo">
+            <div class="logo-mark">
+                <span class="logo-text-main">CM</span><span class="logo-text-accent">&nbsp;Trading</span>
+            </div>
+            <span class="logo-tag">Premium Export Company</span>
+        </a>
+        <nav class="header-nav">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#products" class="active">Products</a>
+            <a href="../index.html#services">Services</a>
+            <a href="../index.html#markets">Markets</a>
+            <a href="../index.html#contact">Contact Us</a>
+        </nav>
+        <div style="display:flex;align-items:center;gap:.75rem">
+            <a href="https://wa.me/916369431485" target="_blank" rel="noopener" class="header-cta">
+                <i class="fab fa-whatsapp"></i> Get Quote
+            </a>
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+    <nav class="mobile-nav-drawer" id="mobileNavDrawer">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#products">Products</a>
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#markets">Markets</a>
+        <a href="../index.html#contact">Contact Us</a>
+    </nav>
+
     <div class="product-page">
         <div class="product-content">
 
-            <a href="../index.html" class="back-link">
+            <a href="../index.html#products" class="back-link">
                 <i class="fas fa-arrow-left"></i>
-                Back to Portfolio
+                Back to Products
             </a>
 
             <div class="product-page-header">
@@ -338,17 +394,14 @@
                 <h2>Ready to Order?</h2>
                 <p>Get in touch for pricing, specifications, and bulk order enquiries on tanks or drums</p>
                 <div class="cta-buttons">
-                    <a href="mailto:chandruselvam1012@gmail.com" class="cta-btn cta-btn-primary">
-                        <i class="fas fa-envelope"></i>
-                        Send Email
+                    <a href="https://wa.me/916369431485?text=Hi%2C%20I%20am%20interested%20in%20Plastic%20Tanks%20or%20Drums.%20Please%20share%20pricing%20and%20details." target="_blank" rel="noopener" class="cta-btn cta-btn-primary">
+                        <i class="fab fa-whatsapp"></i> WhatsApp for Quote
                     </a>
-                    <a href="https://wa.me/916369431485" class="cta-btn cta-btn-secondary">
-                        <i class="fab fa-whatsapp"></i>
-                        WhatsApp
+                    <a href="mailto:chandruselvam1012@gmail.com?subject=Tanks%20%26%20Drums%20Enquiry%20-%20CM%20Trading" class="cta-btn cta-btn-secondary">
+                        <i class="fas fa-envelope"></i> Send Email
                     </a>
-                    <a href="tel:+916369431485" class="cta-btn cta-btn-secondary">
-                        <i class="fas fa-phone"></i>
-                        Call Us
+                    <a href="../index.html#contact" class="cta-btn cta-btn-secondary">
+                        <i class="fas fa-comment-alt"></i> Enquiry Form
                     </a>
                 </div>
             </div>
@@ -356,6 +409,59 @@
         </div>
     </div>
 
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo-mark"><span class="footer-logo-main">CM</span><span class="footer-logo-accent">&nbsp;Trading</span></div>
+                <p class="footer-tagline">Export sourcing company based in Erode, Tamil Nadu. Connecting global buyers with India&rsquo;s best manufacturers since 2024.</p>
+                <div class="footer-social">
+                    <a href="https://wa.me/916369431485" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:chandruselvam1012@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Products</h5>
+                <ul>
+                    <li><a href="turmeric.html"><i class="fas fa-chevron-right"></i> Turmeric</a></li>
+                    <li><a href="spices.html"><i class="fas fa-chevron-right"></i> Spices</a></li>
+                    <li><a href="plastic-storage.html"><i class="fas fa-chevron-right"></i> Plastic Tanks &amp; Drums</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="../index.html#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                    <li><a href="../index.html#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    <li><a href="../index.html#markets"><i class="fas fa-chevron-right"></i> Markets</a></li>
+                    <li><a href="../index.html#faq"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                    <li><a href="../index.html#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Get In Touch</h5>
+                <div class="footer-contact-list">
+                    <div class="footer-contact-item"><i class="fas fa-phone"></i><div><span>Phone / WhatsApp</span><a href="tel:+916369431485">+91 6369431485</a></div></div>
+                    <div class="footer-contact-item"><i class="fas fa-envelope"></i><div><span>Email</span><a href="mailto:chandruselvam1012@gmail.com">chandruselvam1012@gmail.com</a></div></div>
+                    <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><div><span>Location</span><p>Erode, Tamil Nadu, India</p></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">&copy; 2026 CM Trading &amp; Exports. All rights reserved.</p>
+            <div class="footer-badges">
+                <span class="footer-badge"><i class="fas fa-certificate"></i> IEC Registered</span>
+                <span class="footer-badge"><i class="fas fa-flag"></i> Made in India</span>
+                <span class="footer-badge"><i class="fas fa-shield-alt"></i> GST Verified</span>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/916369431485" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i><span>Chat on WhatsApp</span>
+    </a>
+
+    <script>
     <script>
         // Smooth scroll & active tab highlight
         document.querySelectorAll('.section-tab').forEach(tab => {

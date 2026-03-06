@@ -1,5 +1,5 @@
 ﻿/* =============================================
-   CARLOS PORTFOLIO — Dark Navy/Yellow Theme
+   CM TRADING & EXPORTS — BuildUp Theme
    Chandra Mohan (Chandru) | CM Trading & Exports
    ============================================= */
 
@@ -11,32 +11,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(href);
         if (target) {
             e.preventDefault();
-            if (window.innerWidth <= 768) closeSidebar();
+            if (window.innerWidth <= 992) {
+                mobileNavDrawer.classList.remove('open');
+                mobileNavToggle.classList.remove('open');
+            }
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
 
-//  MOBILE SIDEBAR TOGGLE 
-const sidebar      = document.getElementById('sidebar');
-const mobileToggle = document.getElementById('mobileToggle');
-const overlay      = document.getElementById('sidebarOverlay');
+//  MOBILE NAV DRAWER TOGGLE 
+const mobileNavToggle = document.getElementById('mobileNavToggle');
+const mobileNavDrawer = document.getElementById('mobileNavDrawer');
 
-function openSidebar() {
-    sidebar.classList.add('open');
-    overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
+if (mobileNavToggle) {
+    mobileNavToggle.addEventListener('click', () => {
+        mobileNavToggle.classList.toggle('open');
+        mobileNavDrawer.classList.toggle('open');
+        document.body.style.overflow = mobileNavDrawer.classList.contains('open') ? 'hidden' : '';
+    });
 }
-function closeSidebar() {
-    sidebar.classList.remove('open');
-    overlay.classList.remove('open');
-    document.body.style.overflow = '';
-}
-
-if (mobileToggle) mobileToggle.addEventListener('click', () =>
-    sidebar.classList.contains('open') ? closeSidebar() : openSidebar()
-);
-if (overlay) overlay.addEventListener('click', closeSidebar);
+// Close drawer when clicking outside
+document.addEventListener('click', (e) => {
+    if (mobileNavDrawer && mobileNavDrawer.classList.contains('open') &&
+        !mobileNavDrawer.contains(e.target) && !mobileNavToggle.contains(e.target)) {
+        mobileNavDrawer.classList.remove('open');
+        mobileNavToggle.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+});
 
 //  ANIMATED COUNTER 
 function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
@@ -83,11 +86,10 @@ if (statsSection) {
     statsObserver.observe(statsSection);
 }
 
-//  ACTIVE NAV LINK (sidebar + top-nav) 
-const sections  = document.querySelectorAll('section[id]');
-const sideLinks = document.querySelectorAll('.sidebar-nav .nav-link');
-const topLinks  = document.querySelectorAll('.top-nav-links a');
-const topNav    = document.querySelector('.top-nav');
+//  ACTIVE NAV LINK (header + mobile drawer) 
+const sections   = document.querySelectorAll('section[id]');
+const headerLinks = document.querySelectorAll('.header-nav a, .mobile-nav-drawer a');
+const siteHeader  = document.getElementById('siteHeader');
 
 function updateActiveNav() {
     const scrollY = window.pageYOffset;
@@ -97,18 +99,13 @@ function updateActiveNav() {
         if (scrollY >= section.offsetTop - 140) current = section.id;
     });
 
-    sideLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
-    });
-    topLinks.forEach(link => {
+    headerLinks.forEach(link => {
         link.classList.toggle('active', link.getAttribute('href') === '#' + current);
     });
 
-    // Navbar scroll shadow
-    if (topNav) {
-        topNav.style.boxShadow = scrollY > 20
-            ? '0 4px 24px rgba(0,0,0,0.4)'
-            : 'none';
+    // Header scroll shadow / scrolled state
+    if (siteHeader) {
+        siteHeader.classList.toggle('scrolled', scrollY > 20);
     }
 }
 
@@ -154,7 +151,7 @@ function typeLoop() {
 
 if (typedEl) setTimeout(typeLoop, 800);  // small start delay
 
-//  SERVICE CARDS: Click to activate yellow highlight 
+//  SERVICE CARDS: Click to activate highlight 
 const serviceItems = document.querySelectorAll('.service-item');
 serviceItems.forEach(item => {
     item.addEventListener('click', () => {

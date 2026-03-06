@@ -42,6 +42,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="theme-color" content="#0e5c3b">
     
     <!-- Google Analytics (Replace with your GA4 ID) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -104,118 +105,54 @@
 </head>
 <body>
 
-    <!-- Mobile Menu Toggle -->
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle sidebar">
-        <span></span><span></span><span></span>
-    </button>
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-    <!-- ===================== SIDEBAR ===================== -->
-    <aside class="sidebar" id="sidebar">
-
-        <!-- Brand -->
-        <div class="sidebar-brand">
-            <div class="brand-initials">CM</div>
-        </div>
-
-        <!-- Profile -->
-        <div class="sidebar-profile">
-            <div class="profile-avatar">
-                <div class="avatar-inner">
-                    <i class="fas fa-user-tie"></i>
-                </div>
-                <div class="avatar-ring"></div>
+    <!-- ===================== SITE HEADER ===================== -->
+    <header class="site-header" id="siteHeader">
+        <a href="#hero" class="header-logo">
+            <div class="logo-mark">
+                <span class="logo-text-main">CM</span><span class="logo-text-accent">&nbsp;Trading</span>
             </div>
-            <h1 class="sidebar-name">Chandra Mohan</h1>
-            <p class="sidebar-alias">(Chandru)</p>
-            <div class="sidebar-role"><span>Export Sourcing Partner</span></div>
-            <div class="sidebar-location">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Erode, Tamil Nadu, India</span>
-            </div>
-        </div>
-
-        <div class="sidebar-divider"></div>
-
-        <!-- Quick Info -->
-        <div class="sidebar-info">
-            <div class="info-item">
-                <i class="fas fa-phone-alt"></i>
-                <div>
-                    <span class="info-label">Phone</span>
-                    <a href="tel:+916369431485" class="info-value">+91 63694 31485</a>
-                </div>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-envelope"></i>
-                <div>
-                    <span class="info-label">Email</span>
-                    <a href="mailto:chandruselvam1012@gmail.com" class="info-value">chandruselvam1012@gmail.com</a>
-                </div>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-id-badge"></i>
-                <div>
-                    <span class="info-label">IEC Code</span>
-                    <span class="info-value">IEC0325CM4812</span>
-                </div>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-building"></i>
-                <div>
-                    <span class="info-label">Business</span>
-                    <span class="info-value">CM Trading &amp; Exports</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="sidebar-divider"></div>
-
-        <!-- CTA Buttons -->
-        <div class="sidebar-social">
-            <a href="https://wa.me/916369431485" target="_blank" rel="noopener" class="social-btn whatsapp-btn">
-                <i class="fab fa-whatsapp"></i><span>WhatsApp Me</span>
+            <span class="logo-tag">Export Sourcing Partner</span>
+        </a>
+        <nav class="header-nav">
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#services">Services</a>
+            <a href="#markets">Markets</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div style="display:flex;align-items:center;gap:.75rem">
+            <a href="https://wa.me/916369431485" target="_blank" rel="noopener" class="header-cta">
+                <i class="fab fa-whatsapp"></i> Get Quote
             </a>
-            <a href="mailto:chandruselvam1012@gmail.com" class="social-btn email-btn">
-                <i class="fas fa-envelope"></i><span>Send Email</span>
-            </a>
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+    </header>
 
-        <div class="sidebar-footer">
-            <p>&copy; 2026 CM Trading &amp; Exports</p>
-        </div>
-
-    </aside>
+    <!-- Mobile Navigation Drawer -->
+    <nav class="mobile-nav-drawer" id="mobileNavDrawer">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#services">Services</a>
+        <a href="#markets">Markets</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
     <!-- ===================== MAIN CONTENT ===================== -->
-    <main class="main-content">
-
-        <!-- TOP NAVBAR -->
-        <nav class="top-nav">
-            <div class="top-nav-logo">
-                <div class="top-nav-dot"></div>
-                <span>CM Trading &amp; Exports</span>
-            </div>
-            <ul class="top-nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#markets">Markets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <main>
 
         <!-- HERO -->
         <section id="hero" class="hero-section">
+            <div class="hero-grid-bg"></div>
             <div class="hero-inner">
-                <div class="hero-tag">
-                    <i class="fas fa-handshake"></i>
-                    <span>Independent Export Sourcing Partner &middot; Erode, India</span>
-                </div>
-                <h2 class="hero-title">
+                <div class="hero-eyebrow">Independent Export Sourcing Partner &middot; Erode, India</div>
+                <h1 class="hero-title">
                     Connecting Global Buyers<br>
                     <em class="hero-title-accent"><span id="typed-text"></span><span class="typed-cursor">|</span></em>
-                </h2>
+                </h1>
                 <p class="hero-desc">
                     Transparently. Efficiently. Reliably. &mdash; Sourcing premium agricultural commodities and industrial goods from India&rsquo;s best production regions.
                 </p>
@@ -234,24 +171,16 @@
                 </div>
             </div>
             <div class="hero-side">
-                <div class="hero-circle-wrap">
-                    <div class="hero-circle">
-                        <i class="fas fa-globe-asia"></i>
-                    </div>
-                    <div class="hero-ring r1"></div>
-                    <div class="hero-ring r2"></div>
-                    <div class="hero-ring r3"></div>
-                </div>
-                <div class="hero-float-card fc1">
-                    <i class="fas fa-users"></i>
+                <div class="hero-stat-card">
+                    <div class="hero-stat-icon"><i class="fas fa-users"></i></div>
                     <div><strong>30+</strong><span>Verified Suppliers</span></div>
                 </div>
-                <div class="hero-float-card fc2">
-                    <i class="fas fa-certificate"></i>
+                <div class="hero-stat-card">
+                    <div class="hero-stat-icon"><i class="fas fa-certificate"></i></div>
                     <div><strong>IEC</strong><span>Registered Exporter</span></div>
                 </div>
-                <div class="hero-float-card fc3">
-                    <i class="fas fa-globe"></i>
+                <div class="hero-stat-card">
+                    <div class="hero-stat-icon"><i class="fas fa-globe"></i></div>
                     <div><strong>10+</strong><span>Countries Reached</span></div>
                 </div>
             </div>
@@ -282,7 +211,7 @@
         <!-- ABOUT -->
         <section id="about" class="content-section about-section">
             <div class="section-label-row reveal">
-                <div class="section-label-line"></div>
+                <div class="section-label-bar"></div>
                 <span class="section-label-text">WHO I AM</span>
             </div>
             <h2 class="content-title reveal">About Me</h2>
@@ -329,74 +258,108 @@
         <!-- PRODUCTS -->
         <section id="products" class="content-section products-section">
             <div class="section-label-row reveal">
-                <div class="section-label-line"></div>
+                <div class="section-label-bar"></div>
                 <span class="section-label-text">WHAT I EXPORT</span>
             </div>
             <h2 class="content-title reveal">Products I Can Source</h2>
             <p class="content-subtitle reveal">Premium quality from verified manufacturers &mdash; direct from production regions</p>
 
             <div class="products-row">
-                <a href="pages/turmeric.html" class="product-card reveal">
-                    <div class="product-card-head turmeric-head">
-                        <div class="product-card-icon-big"><i class="fas fa-seedling"></i></div>
-                        <span class="product-badge"><i class="fas fa-star"></i> Featured</span>
-                    </div>
-                    <div class="product-card-body">
-                        <h3>Turmeric</h3>
-                        <p class="product-origin"><i class="fas fa-map-pin"></i> Erode Origin &mdash; India&rsquo;s Premier Hub</p>
-                        <ul class="product-list">
-                            <li><i class="fas fa-check"></i> Polished turmeric fingers</li>
-                            <li><i class="fas fa-check"></i> Dried turmeric</li>
-                            <li><i class="fas fa-check"></i> Turmeric powder</li>
-                            <li><i class="fas fa-check"></i> High curcumin varieties</li>
-                        </ul>
-                        <div class="product-view-details">
-                            <i class="fas fa-arrow-right"></i> View Details & Images
-                        </div>
-                    </div>
-                </a>
+
+                <!-- SPICES CARD -->
                 <a href="pages/spices.html" class="product-card reveal">
                     <div class="product-card-head spices-head">
                         <div class="product-card-icon-big"><i class="fas fa-pepper-hot"></i></div>
+                        <span class="product-badge"><i class="fas fa-leaf"></i> Agricultural</span>
                     </div>
                     <div class="product-card-body">
-                        <h3>Indian Spices</h3>
-                        <p class="product-origin"><i class="fas fa-users"></i> Direct from Farmers &amp; Processors</p>
-                        <ul class="product-list">
-                            <li><i class="fas fa-check"></i> Chilli</li>
-                            <li><i class="fas fa-check"></i> Coriander</li>
-                            <li><i class="fas fa-check"></i> Black Pepper</li>
-                            <li><i class="fas fa-check"></i> Whole &amp; powdered spices</li>
-                        </ul>
+                        <h3>Spices</h3>
+                        <p class="product-origin"><i class="fas fa-map-pin"></i> Erode &amp; South India &mdash; Direct Farm to Port</p>
+
+                        <!-- Turmeric sub-section -->
+                        <div class="product-sub-section">
+                            <div class="product-sub-label">
+                                <i class="fas fa-seedling"></i> Turmeric
+                                <span class="product-badge-sm"><i class="fas fa-star"></i> Featured</span>
+                            </div>
+                            <ul class="product-list">
+                                <li><i class="fas fa-check"></i> Polished turmeric fingers</li>
+                                <li><i class="fas fa-check"></i> Dried turmeric</li>
+                                <li><i class="fas fa-check"></i> Turmeric powder</li>
+                                <li><i class="fas fa-check"></i> High curcumin varieties</li>
+                            </ul>
+                        </div>
+
+                        <!-- Other Spices sub-section -->
+                        <div class="product-sub-section">
+                            <div class="product-sub-label">
+                                <i class="fas fa-pepper-hot"></i> Other Spices
+                            </div>
+                            <ul class="product-list">
+                                <li><i class="fas fa-check"></i> Chilli</li>
+                                <li><i class="fas fa-check"></i> Coriander</li>
+                                <li><i class="fas fa-check"></i> Black Pepper</li>
+                                <li><i class="fas fa-check"></i> Whole &amp; powdered forms</li>
+                            </ul>
+                        </div>
+
                         <div class="product-view-details">
-                            <i class="fas fa-arrow-right"></i> View Details & Images
+                            <i class="fas fa-arrow-right"></i> View Details &amp; Images
                         </div>
                     </div>
                 </a>
+
+                <!-- PLASTIC DRUMS & TANKS CARD -->
                 <a href="pages/plastic-storage.html" class="product-card reveal">
                     <div class="product-card-head industrial-head">
                         <div class="product-card-icon-big"><i class="fas fa-cube"></i></div>
+                        <span class="product-badge"><i class="fas fa-industry"></i> Industrial</span>
                     </div>
                     <div class="product-card-body">
-                        <h3>Plastic Storage Solutions</h3>
-                        <p class="product-origin"><i class="fas fa-certificate"></i> Verified Manufacturers</p>
-                        <ul class="product-list">
-                            <li><i class="fas fa-check"></i> Plastic water storage tanks</li>
-                            <li><i class="fas fa-check"></i> Industrial plastic containers</li>
-                            <li><i class="fas fa-check"></i> Customized capacity tanks</li>
-                        </ul>
+                        <h3>Plastic Drums &amp; Tanks</h3>
+                        <p class="product-origin"><i class="fas fa-certificate"></i> Verified Manufacturers &mdash; All Capacities</p>
+
+                        <div class="product-sub-grid">
+                            <!-- Tanks sub-section -->
+                            <div class="product-sub-section">
+                                <div class="product-sub-label">
+                                    <i class="fas fa-database"></i> Tanks
+                                </div>
+                                <ul class="product-list">
+                                    <li><i class="fas fa-check"></i> Water storage tanks</li>
+                                    <li><i class="fas fa-check"></i> Industrial tanks</li>
+                                    <li><i class="fas fa-check"></i> Loft &amp; underground</li>
+                                    <li><i class="fas fa-check"></i> Custom capacity</li>
+                                </ul>
+                            </div>
+
+                            <!-- Drums & Barrels sub-section -->
+                            <div class="product-sub-section">
+                                <div class="product-sub-label">
+                                    <i class="fas fa-oil-can"></i> Drums &amp; Barrels
+                                </div>
+                                <ul class="product-list">
+                                    <li><i class="fas fa-check"></i> Chemical drums</li>
+                                    <li><i class="fas fa-check"></i> Industrial barrels</li>
+                                    <li><i class="fas fa-check"></i> Food-grade drums</li>
+                                    <li><i class="fas fa-check"></i> Various capacities</li>
+                                </ul>
+                            </div>
+                        </div>
+
                         <div class="product-view-details">
-                            <i class="fas fa-arrow-right"></i> View Details & Images
+                            <i class="fas fa-arrow-right"></i> View Details &amp; Images
                         </div>
                     </div>
                 </a>
+
             </div>
         </section>
 
         <!-- SERVICES -->
         <section id="services" class="content-section services-section">
             <div class="section-label-row reveal">
-                <div class="section-label-line"></div>
+                <div class="section-label-bar"></div>
                 <span class="section-label-text">WHAT I DO</span>
             </div>
             <h2 class="content-title reveal">Services Offered</h2>
@@ -458,7 +421,7 @@
         <!-- MARKETS -->
         <section id="markets" class="content-section markets-section">
             <div class="section-label-row reveal">
-                <div class="section-label-line"></div>
+                <div class="section-label-bar"></div>
                 <span class="section-label-text">WHERE WE REACH</span>
             </div>
             <h2 class="content-title reveal">Export Markets</h2>
@@ -500,7 +463,7 @@
         <!-- TESTIMONIALS -->
         <section id="testimonials" class="content-section testimonials-section">
             <div class="section-label-row reveal">
-                <div class="section-label-line"></div>
+                <div class="section-label-bar"></div>
                 <span class="section-label-text">CLIENT FEEDBACK</span>
             </div>
             <h2 class="content-title reveal">What Clients Say</h2>
@@ -687,7 +650,7 @@
         <!-- FAQ -->
         <section id="faq" class="content-section faq-section">
             <div class="section-label-row reveal">
-                <div class="section-label-line"></div>
+                <div class="section-label-bar"></div>
                 <span class="section-label-text">COMMON QUESTIONS</span>
             </div>
             <h2 class="content-title reveal">Frequently Asked Questions</h2>
@@ -854,7 +817,7 @@
         <!-- CONTACT -->
         <section id="contact" class="content-section contact-section">
             <div class="section-label-row reveal">
-                <div class="section-label-line"></div>
+                <div class="section-label-bar"></div>
                 <span class="section-label-text">GET IN TOUCH</span>
             </div>
             <h2 class="content-title reveal">Contact Me</h2>
@@ -1039,6 +1002,10 @@
         <!-- FOOTER -->
         <footer class="main-footer">
             <div class="footer-inner">
+                <div class="footer-logo-mark">
+                    <span class="footer-logo-main">CM</span><span class="footer-logo-accent">&nbsp;Trading</span>
+                </div>
+                <div class="footer-divider"></div>
                 <p class="footer-name">Chandra Mohan <span>(Chandru)</span></p>
                 <p class="footer-role">Independent Export Sourcing Partner &mdash; CM Trading &amp; Exports, Erode, India</p>
                 <p class="footer-copy">&copy; 2026 Chandra Mohan (Chandru) &mdash; CM Trading &amp; Exports. All rights reserved.</p>
@@ -1050,3 +1017,4 @@
     <script src="js/script.js"></script>
 </body>
 </html>
+

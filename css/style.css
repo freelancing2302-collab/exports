@@ -1,39 +1,38 @@
-﻿/*
-   INDIA HERITAGE EXPORTS THEME â€” CM Trading & Exports
-   Saffron Â· India Green Â· Navy Â· B2B Export Design
-   Inspired by Indian Export Industry Analysis
+/*
+   PROFESSIONAL EXPORTS THEME — CM Trading & Exports
+   Royal Blue · Navy · Clean Gray · B2B Corporate Design
 */
 
 /* --- VARIABLES --- */
 :root {
-  --saffron:        #D4580A;
-  --saffron-lt:     #E8720C;
-  --saffron-dim:    #B84C08;
-  --saffron-soft:   rgba(212,88,10,0.08);
-  --saffron-glow:   rgba(212,88,10,0.25);
+  --saffron:        #1A5FC4;
+  --saffron-lt:     #2670D8;
+  --saffron-dim:    #1449A8;
+  --saffron-soft:   rgba(26,95,196,0.08);
+  --saffron-glow:   rgba(26,95,196,0.22);
   --green:          #046A38;
   --green-lt:       #0A8048;
   --green-dim:      #035830;
   --green-soft:     rgba(4,106,56,0.08);
   --green-glow:     rgba(4,106,56,0.22);
-  --gold:           #C98B0A;
-  --gold-dim:       #A87208;
-  --gold-soft:      rgba(201,139,10,0.10);
-  --gold-glow:      rgba(201,139,10,0.28);
-  --navy:           #0E1F3D;
+  --gold:           #9B6E15;
+  --gold-dim:       #7D5810;
+  --gold-soft:      rgba(155,110,21,0.09);
+  --gold-glow:      rgba(155,110,21,0.22);
+  --navy:           #0B1D3A;
   --wa-green:       #25D366;
-  --bg:             #FAFAF7;
-  --bg-alt:         #F3EEE4;
+  --bg:             #F5F7FB;
+  --bg-alt:         #EDF1F8;
   --bg-card:        #FFFFFF;
-  --bg-dark:        #0E1F3D;
-  --bg-dark-alt:    #0A1830;
-  --border:         #E4DDD1;
-  --border-light:   #EDE8DE;
-  --border-dark:    #CDC5B5;
-  --dark:           #111111;
-  --text:           #282828;
-  --grey-1:         #525252;
-  --grey-2:         #888888;
+  --bg-dark:        #0B1D3A;
+  --bg-dark-alt:    #071428;
+  --border:         #DDE3EE;
+  --border-light:   #E8EDF7;
+  --border-dark:    #C2CCDE;
+  --dark:           #0D1421;
+  --text:           #1E2A3A;
+  --grey-1:         #4A5568;
+  --grey-2:         #7C8EAC;
   --error:          #D94040;
   --font-head:      'Poppins', sans-serif;
   --font-body:      'Inter', sans-serif;
@@ -49,7 +48,7 @@
 
 /* --- RESET --- */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-tap-highlight-color:rgba(212,88,10,.15)}
+html{scroll-behavior:smooth;-webkit-tap-highlight-color:rgba(26,95,196,.15)}
 body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
@@ -185,14 +184,14 @@ button{cursor:pointer;border:none;background:none}
 .hero-section::before{
   content:'';position:absolute;
   top:0;right:0;width:48%;height:100%;
-  background:linear-gradient(155deg,rgba(212,88,10,.1) 0%,rgba(4,106,56,.15) 100%);
+  background:linear-gradient(155deg,rgba(26,95,196,.1) 0%,rgba(4,106,56,.15) 100%);
   clip-path:polygon(12% 0,100% 0,100% 100%,0 100%);
   z-index:0;
 }
 .hero-section::after{
   content:'';position:absolute;
   left:0;top:0;bottom:0;width:4px;
-  background:linear-gradient(to bottom,var(--saffron),rgba(212,88,10,.2),var(--green));
+  background:linear-gradient(to bottom,var(--saffron),rgba(26,95,196,.2),var(--green));
   z-index:1;
 }
 .hero-grid-bg{
@@ -206,7 +205,7 @@ button{cursor:pointer;border:none;background:none}
 .hero-inner{position:relative;z-index:2;flex:1;max-width:640px}
 .hero-eyebrow{
   font-size:.7rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;
-  color:rgba(212,88,10,.9);margin-bottom:1.2rem;
+  color:rgba(26,95,196,.9);margin-bottom:1.2rem;
   display:flex;align-items:center;gap:.7rem;
 }
 .hero-eyebrow::before{content:'';display:inline-block;width:26px;height:2px;background:var(--saffron);border-radius:1px}
@@ -225,7 +224,7 @@ button{cursor:pointer;border:none;background:none}
   padding:.42rem 1rem;border-radius:var(--radius-pill);
   display:flex;align-items:center;gap:.4rem;transition:var(--transition);
 }
-.chip:hover{background:rgba(212,88,10,.2);border-color:var(--saffron);color:#fff}
+.chip:hover{background:rgba(26,95,196,.2);border-color:var(--saffron);color:#fff}
 .chip i{font-size:.68rem;color:var(--saffron)}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-bottom:2rem}
 .hero-actions .btn-primary{background:var(--saffron);box-shadow:0 4px 18px var(--saffron-glow)}
@@ -238,7 +237,7 @@ button{cursor:pointer;border:none;background:none}
   font-size:.7rem;color:rgba(255,255,255,.65);font-weight:500;
   transition:var(--transition);
 }
-.trust-badge:hover{background:rgba(212,88,10,.15);border-color:rgba(212,88,10,.3);color:rgba(255,255,255,.9)}
+.trust-badge:hover{background:rgba(26,95,196,.15);border-color:rgba(26,95,196,.3);color:rgba(255,255,255,.9)}
 .trust-badge i{color:var(--saffron);font-size:.75rem}
 .hero-side{
   position:relative;z-index:2;flex-shrink:0;
@@ -257,7 +256,7 @@ button{cursor:pointer;border:none;background:none}
 .hero-stat-card:nth-child(3){animation-delay:2.8s;border-left-color:var(--gold)}
 @keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .hero-stat-icon{
-  width:46px;height:46px;background:rgba(212,88,10,.15);border-radius:var(--radius-sm);
+  width:46px;height:46px;background:rgba(26,95,196,.15);border-radius:var(--radius-sm);
   display:flex;align-items:center;justify-content:center;
   font-size:1.15rem;color:var(--saffron);flex-shrink:0;
 }
@@ -312,7 +311,7 @@ button{cursor:pointer;border:none;background:none}
 .about-body strong{color:var(--dark)}
 .about-tags{display:flex;flex-wrap:wrap;gap:.5rem}
 .about-tags span{
-  background:var(--saffron-soft);border:1.5px solid rgba(212,88,10,.2);
+  background:var(--saffron-soft);border:1.5px solid rgba(26,95,196,.2);
   color:var(--saffron);font-size:.72rem;font-weight:600;
   padding:.34rem 1rem;border-radius:var(--radius-pill);transition:var(--transition);
 }
@@ -346,7 +345,7 @@ button{cursor:pointer;border:none;background:none}
   border-radius:var(--radius);padding:2rem 1.6rem;
   transition:var(--transition);position:relative;overflow:hidden;text-align:center;
 }
-.why-card:hover{background:rgba(212,88,10,.1);border-color:rgba(212,88,10,.3);transform:translateY(-4px)}
+.why-card:hover{background:rgba(26,95,196,.1);border-color:rgba(26,95,196,.3);transform:translateY(-4px)}
 .why-card::before{
   content:'';position:absolute;top:0;left:0;right:0;height:3px;
   background:var(--saffron);transform:scaleX(0);transform-origin:center;transition:transform .35s ease;
@@ -354,7 +353,7 @@ button{cursor:pointer;border:none;background:none}
 .why-card:hover::before{transform:scaleX(1)}
 .why-icon{
   width:56px;height:56px;border-radius:50%;
-  background:rgba(212,88,10,.12);border:1.5px solid rgba(212,88,10,.22);
+  background:rgba(26,95,196,.12);border:1.5px solid rgba(26,95,196,.22);
   display:flex;align-items:center;justify-content:center;
   font-size:1.3rem;color:var(--saffron);margin:0 auto 1.2rem;transition:var(--transition);
 }
@@ -430,7 +429,7 @@ button{cursor:pointer;border:none;background:none}
 .service-item:first-child .service-icon-wrap,.service-item.active-service .service-icon-wrap{color:#fff}
 .service-item:first-child h3,.service-item.active-service h3{color:#fff}
 .service-item:first-child p,.service-item.active-service p{color:rgba(255,255,255,.8)}
-.service-item:not(:first-child):hover{background:var(--saffron-soft);border-color:rgba(212,88,10,.3);transform:translateY(-4px)}
+.service-item:not(:first-child):hover{background:var(--saffron-soft);border-color:rgba(26,95,196,.3);transform:translateY(-4px)}
 .service-num{font-family:var(--font-head);font-size:.62rem;font-weight:800;color:var(--border-dark);letter-spacing:1.5px;margin-bottom:1.2rem}
 .service-icon-wrap{font-size:1.7rem;color:var(--saffron);margin-bottom:1rem;transition:var(--transition)}
 .service-item:not(:first-child):hover .service-icon-wrap{transform:scale(1.1)}
@@ -457,7 +456,7 @@ button{cursor:pointer;border:none;background:none}
   border-radius:var(--radius);padding:2.2rem 1.8rem;transition:var(--transition);
   position:relative;overflow:hidden;
 }
-.market-card:hover{border-color:rgba(212,88,10,.4);background:rgba(212,88,10,.08);transform:translateY(-4px)}
+.market-card:hover{border-color:rgba(26,95,196,.4);background:rgba(26,95,196,.08);transform:translateY(-4px)}
 .market-card.worldwide{border-style:dashed;border-color:rgba(255,255,255,.15)}
 .market-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--saffron),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
 .market-card:hover::before{transform:scaleX(1)}
@@ -472,7 +471,7 @@ button{cursor:pointer;border:none;background:none}
 .testimonial-card{background:var(--bg-card);border:1.5px solid var(--border);border-radius:var(--radius);padding:2.2rem;display:flex;flex-direction:column;gap:1.4rem;transition:var(--transition);position:relative;overflow:hidden;box-shadow:var(--shadow-sm)}
 .testimonial-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--saffron),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
 .testimonial-card:hover::before{transform:scaleX(1)}
-.testimonial-card:hover{border-color:rgba(212,88,10,.3);box-shadow:var(--shadow);transform:translateY(-4px)}
+.testimonial-card:hover{border-color:rgba(26,95,196,.3);box-shadow:var(--shadow);transform:translateY(-4px)}
 .testimonial-header{display:flex;align-items:flex-start;gap:1.1rem}
 .testimonial-avatar{width:50px;height:50px;border-radius:var(--radius-sm);background:linear-gradient(135deg,var(--saffron),var(--saffron-lt));display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .testimonial-avatar i{font-size:1.4rem;color:#fff}
@@ -522,7 +521,7 @@ button{cursor:pointer;border:none;background:none}
 .contact-info-col{display:flex;flex-direction:column}
 .contact-row{display:flex;align-items:flex-start;gap:1.2rem;padding:1.2rem 0;border-bottom:1px solid var(--border)}
 .contact-row:first-child{padding-top:0}
-.contact-icon-wrap{width:40px;height:40px;background:var(--saffron-soft);border:1.5px solid rgba(212,88,10,.18);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:.88rem;color:var(--saffron);flex-shrink:0}
+.contact-icon-wrap{width:40px;height:40px;background:var(--saffron-soft);border:1.5px solid rgba(26,95,196,.18);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:.88rem;color:var(--saffron);flex-shrink:0}
 .contact-text{display:flex;flex-direction:column;gap:.2rem}
 .contact-label{font-size:.62rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--grey-2);font-weight:700}
 .contact-val{font-size:.92rem;color:var(--dark);font-weight:500}

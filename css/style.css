@@ -146,13 +146,13 @@ button{cursor:pointer;border:none;background:none}
 .mobile-nav-drawer a:hover{color:var(--saffron);padding-left:1rem}
 
 /* --- SECTION BASE --- */
-.content-section{padding:7rem 5rem;border-bottom:1px solid var(--border)}
+.content-section{padding:4.5rem 5rem;border-bottom:1px solid var(--border)}
 .section-label-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.9rem}
 .section-label-bar{width:36px;height:4px;background:var(--saffron);border-radius:2px;flex-shrink:0}
 .section-label-bar-sm{width:16px;height:4px;background:var(--saffron);opacity:.5;border-radius:2px;flex-shrink:0}
 .section-label-text{font-size:.63rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--saffron)}
 .content-title{font-family:var(--font-head);font-size:2.8rem;font-weight:800;color:var(--dark);letter-spacing:-.5px;line-height:1.1;margin-bottom:.65rem}
-.content-subtitle{font-size:.95rem;color:var(--grey-1);margin-bottom:3rem;line-height:1.8}
+.content-subtitle{font-size:.95rem;color:var(--grey-1);margin-bottom:2rem;line-height:1.8}
 .content-subtitle strong{color:var(--green)}
 .btn-primary{
   background:var(--saffron);color:#fff;font-family:var(--font-head);font-weight:700;font-size:.87rem;
@@ -177,7 +177,7 @@ button{cursor:pointer;border:none;background:none}
 
 /* --- HERO --- */
 .hero-section{
-  position:relative;min-height:calc(100vh - var(--header-h));
+  position:relative;min-height:calc(88vh - var(--header-h));
   display:flex;align-items:center;overflow:hidden;
   background:var(--navy);padding:5rem 5rem;
 }
@@ -269,7 +269,7 @@ button{cursor:pointer;border:none;background:none}
 .stats-section{padding:0;background:var(--saffron);border-bottom:none}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
 .stat-item{
-  padding:3.5rem 2rem;text-align:center;
+  padding:2.5rem 1.5rem;text-align:center;
   border-right:1px solid rgba(255,255,255,.2);position:relative;transition:var(--transition);
 }
 .stat-item:last-child{border-right:none}
@@ -331,7 +331,7 @@ button{cursor:pointer;border:none;background:none}
 
 /* --- WHY CHOOSE US --- */
 .why-section{
-  padding:7rem 5rem;background:var(--navy);
+  padding:4.5rem 5rem;background:var(--navy);
   border-bottom:1px solid rgba(255,255,255,.06);
 }
 .why-section .section-label-text{color:var(--saffron)}
@@ -588,7 +588,7 @@ a.contact-val:hover{color:var(--saffron)}
 .office-info-item strong{font-size:.82rem;color:var(--dark);font-weight:700}
 
 /* --- FOOTER (MULTI-COLUMN) --- */
-.main-footer{background:var(--bg-dark);padding:5rem 5rem 0}
+.main-footer{background:var(--bg-dark);padding:4rem 5rem 0}
 .footer-top{
   display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;
   gap:3rem;padding-bottom:3rem;
@@ -665,9 +665,9 @@ a.contact-val:hover{color:var(--saffron)}
 /* --- RESPONSIVE --- */
 @media(max-width:1280px){
   .announce-bar{padding:.5rem 3.5rem}
-  .content-section{padding:5.5rem 3.5rem}
+  .content-section{padding:3.5rem 3.5rem}
   .hero-section{padding:4.5rem 3.5rem}
-  .why-section{padding:5.5rem 3.5rem}
+  .why-section{padding:3.5rem 3.5rem}
   .trust-strip{padding:1.6rem 3.5rem}
   .main-footer{padding:4rem 3.5rem 0}
   .site-header{padding:0 3.5rem}
@@ -681,9 +681,9 @@ a.contact-val:hover{color:var(--saffron)}
   .announce-bar{padding:.5rem 2.5rem}
   .site-header{padding:0 2.5rem}
   .trust-strip{padding:1.5rem 2.5rem}
-  .content-section{padding:4.5rem 2.5rem}
+  .content-section{padding:3rem 2.5rem}
   .hero-section{padding:3.5rem 2.5rem}
-  .why-section{padding:4.5rem 2.5rem}
+  .why-section{padding:3rem 2.5rem}
   .why-grid{grid-template-columns:repeat(2,1fr)}
   .services-grid{grid-template-columns:repeat(2,1fr)}
   .markets-grid{grid-template-columns:repeat(2,1fr)}
@@ -712,12 +712,12 @@ a.contact-val:hover{color:var(--saffron)}
   .trust-strip{flex-direction:column;gap:0;padding:1.2rem;align-items:stretch}
   .trust-item{border-right:none;border-bottom:1px solid var(--border);justify-content:center;padding:.55rem 1rem}
   .trust-item:last-child{border-bottom:none}
-  .content-section{padding:3.5rem 1.5rem}
+  .content-section{padding:2.5rem 1.5rem}
   .hero-section{padding:4rem 1.5rem 3rem}
   .hero-section::before,.hero-section::after{display:none}
   .hero-title{font-size:2.1rem}
   .content-title{font-size:2rem}
-  .why-section{padding:3.5rem 1.5rem}
+  .why-section{padding:2.5rem 1.5rem}
   .why-grid{grid-template-columns:1fr 1fr}
   .services-grid{grid-template-columns:1fr}
   .markets-grid{grid-template-columns:1fr}

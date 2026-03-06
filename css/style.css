@@ -415,6 +415,15 @@ button{cursor:pointer;border:none;background:none}
 .product-badge-sm{background:var(--saffron);color:#fff;font-size:.55rem;font-weight:700;padding:.18rem .55rem;border-radius:var(--radius-pill);display:inline-flex;align-items:center;gap:.25rem;margin-left:auto}
 .product-sub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;margin-top:.5rem}
 
+/* Clickable sub-section links */
+.product-sub-link{display:block;text-decoration:none;color:inherit;cursor:pointer;border-radius:var(--radius-sm);transition:background .18s}
+.product-sub-link:hover{background:var(--bg-alt)}
+.product-sub-link:hover .product-sub-label{color:var(--saffron)}
+.product-sub-arrow{margin-left:auto !important;font-size:.62rem !important;color:var(--saffron) !important;opacity:0;transform:translateX(-5px);transition:opacity .18s,transform .18s}
+.product-sub-link:hover .product-sub-arrow{opacity:1;transform:translateX(0)}
+/* Card is now a div — keep border/shadow hover but remove pointer cursor */
+.product-card{cursor:default}
+
 /* --- SERVICES --- */
 .services-section{background:var(--bg-card);border-bottom:1px solid var(--border)}
 .services-section .section-label-text{color:var(--saffron)}

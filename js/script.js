@@ -151,6 +151,44 @@ function typeLoop() {
 
 if (typedEl) setTimeout(typeLoop, 800);  // small start delay
 
+//  PRODUCT MASTER–DETAIL  
+const prodSelCards  = document.querySelectorAll('.prod-sel-card');
+const prodDetails   = document.querySelectorAll('.prod-detail');
+const prodTabBtns   = document.querySelectorAll('.prod-tab');
+
+function activateProduct(productId) {
+    prodSelCards.forEach(c => c.classList.remove('active'));
+    prodDetails.forEach(d => d.classList.remove('active'));
+    const selCard = document.querySelector('.prod-sel-card[data-product="' + productId + '"]');
+    const detPanel = document.getElementById('detail-' + productId);
+    if (selCard)  selCard.classList.add('active');
+    if (detPanel) detPanel.classList.add('active');
+}
+
+prodSelCards.forEach(card => {
+    card.addEventListener('click', () => {
+        activateProduct(card.getAttribute('data-product'));
+    });
+});
+
+prodTabBtns.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const filter = tab.getAttribute('data-filter');
+        prodTabBtns.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        prodSelCards.forEach(card => {
+            const match = filter === 'all' || card.getAttribute('data-cat') === filter;
+            card.classList.toggle('hidden', !match);
+        });
+        // If the currently active selector card was just hidden, switch to first visible
+        const activeCard = document.querySelector('.prod-sel-card.active');
+        if (activeCard && activeCard.classList.contains('hidden')) {
+            const firstVisible = document.querySelector('.prod-sel-card:not(.hidden)');
+            if (firstVisible) activateProduct(firstVisible.getAttribute('data-product'));
+        }
+    });
+});
+
 //  SERVICE CARDS: Click to activate highlight 
 const serviceItems = document.querySelectorAll('.service-item');
 serviceItems.forEach(item => {

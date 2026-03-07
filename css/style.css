@@ -363,11 +363,6 @@ button{cursor:pointer;border:none;background:none}
 
 /* --- PRODUCTS --- */
 .products-section{background:var(--bg-alt)}
-/* Filter tabs */
-.prod-filter-tabs{display:flex;gap:.75rem;margin-top:2.5rem;margin-bottom:2.8rem;flex-wrap:wrap}
-.prod-tab{padding:.6rem 1.4rem;border-radius:var(--radius-pill);border:1.5px solid var(--border);background:var(--bg-card);color:var(--grey-1);font-size:.82rem;font-weight:600;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-body)}
-.prod-tab:hover{border-color:var(--saffron);color:var(--saffron)}
-.prod-tab.active{background:var(--saffron);border-color:var(--saffron);color:#fff;box-shadow:0 4px 18px rgba(26,95,196,.25)}
 /* Category group */
 .prod-category{margin-bottom:3rem}
 .prod-category.cat-hidden{display:none}

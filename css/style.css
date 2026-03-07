@@ -364,7 +364,7 @@ button{cursor:pointer;border:none;background:none}
 /* --- PRODUCTS --- */
 .products-section{background:var(--bg-alt)}
 /* Category group */
-.prod-category{margin-bottom:2rem}
+.prod-category{margin-bottom:2rem;background:var(--bg-card);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.8rem 2rem;overflow:hidden}
 .prod-category.cat-hidden{display:none}
 .prod-section-heading{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
 .psh-line{flex:1;height:1px;background:var(--border)}

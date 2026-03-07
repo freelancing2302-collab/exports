@@ -336,97 +336,148 @@
         <section id="products" class="content-section products-section">
             <div class="section-label-row reveal">
                 <div class="section-label-bar"></div>
-                <span class="section-label-text">WHAT I EXPORT</span>
+                <span class="section-label-text">WHAT WE EXPORT</span>
             </div>
             <h2 class="content-title reveal">Products We Export</h2>
-            <p class="content-subtitle reveal">Premium quality from verified manufacturers &mdash; direct from production regions</p>
+            <p class="content-subtitle reveal">Premium quality from verified manufacturers &mdash; direct from India&rsquo;s top production regions</p>
 
-            <div class="products-row">
-
-                <!-- SPICES CARD -->
-                <div class="product-card reveal">
-                    <div class="product-card-head spices-head">
-                        <div class="product-card-icon-big"><i class="fas fa-pepper-hot"></i></div>
-                        <span class="product-badge"><i class="fas fa-leaf"></i> Agricultural</span>
-                    </div>
-                    <div class="product-card-body">
-                        <h3>Spices</h3>
-                        <p class="product-origin"><i class="fas fa-map-pin"></i> Erode &amp; South India &mdash; Direct Farm to Port</p>
-
-                        <!-- Turmeric sub-section — click to open turmeric page -->
-                        <a href="pages/turmeric.html" class="product-sub-section product-sub-link">
-                            <div class="product-sub-label">
-                                <i class="fas fa-seedling"></i> Turmeric
-                                <span class="product-badge-sm"><i class="fas fa-star"></i> Featured</span>
-                                <i class="fas fa-arrow-right product-sub-arrow"></i>
-                            </div>
-                            <ul class="product-list">
-                                <li><i class="fas fa-check"></i> Polished turmeric fingers</li>
-                                <li><i class="fas fa-check"></i> Dried turmeric</li>
-                                <li><i class="fas fa-check"></i> Turmeric powder</li>
-                                <li><i class="fas fa-check"></i> High curcumin varieties</li>
-                            </ul>
-                        </a>
-
-                        <!-- Other Spices sub-section — click to open spices page -->
-                        <a href="pages/spices.html" class="product-sub-section product-sub-link">
-                            <div class="product-sub-label">
-                                <i class="fas fa-pepper-hot"></i> Other Spices
-                                <i class="fas fa-arrow-right product-sub-arrow"></i>
-                            </div>
-                            <ul class="product-list">
-                                <li><i class="fas fa-check"></i> Red Chilli</li>
-                                <li><i class="fas fa-check"></i> Coriander</li>
-                                <li><i class="fas fa-check"></i> Black Pepper</li>
-                                <li><i class="fas fa-check"></i> Whole &amp; powdered forms</li>
-                            </ul>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- PLASTIC DRUMS & TANKS CARD -->
-                <div class="product-card reveal">
-                    <div class="product-card-head industrial-head">
-                        <div class="product-card-icon-big"><i class="fas fa-cube"></i></div>
-                        <span class="product-badge"><i class="fas fa-industry"></i> Industrial</span>
-                    </div>
-                    <div class="product-card-body">
-                        <h3>Plastic Drums &amp; Tanks</h3>
-                        <p class="product-origin"><i class="fas fa-certificate"></i> Verified Manufacturers &mdash; All Capacities</p>
-
-                        <div class="product-sub-grid">
-                            <!-- Tanks sub-section — click to open tanks page -->
-                            <a href="pages/tanks.html" class="product-sub-section product-sub-link">
-                                <div class="product-sub-label">
-                                    <i class="fas fa-database"></i> Tanks
-                                    <i class="fas fa-arrow-right product-sub-arrow"></i>
-                                </div>
-                                <ul class="product-list">
-                                    <li><i class="fas fa-check"></i> Water storage tanks</li>
-                                    <li><i class="fas fa-check"></i> Industrial tanks</li>
-                                    <li><i class="fas fa-check"></i> Loft &amp; underground</li>
-                                    <li><i class="fas fa-check"></i> Custom capacity</li>
-                                </ul>
-                            </a>
-
-                            <!-- Drums & Barrels sub-section — click to open drums page -->
-                            <a href="pages/drums.html" class="product-sub-section product-sub-link">
-                                <div class="product-sub-label">
-                                    <i class="fas fa-oil-can"></i> Drums &amp; Barrels
-                                    <i class="fas fa-arrow-right product-sub-arrow"></i>
-                                </div>
-                                <ul class="product-list">
-                                    <li><i class="fas fa-check"></i> Chemical drums</li>
-                                    <li><i class="fas fa-check"></i> Industrial barrels</li>
-                                    <li><i class="fas fa-check"></i> Food-grade drums</li>
-                                    <li><i class="fas fa-check"></i> Various capacities</li>
-                                </ul>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+            <!-- CATEGORY TABS -->
+            <div class="prod-filter-tabs reveal">
+                <button class="prod-tab active" data-filter="all">All Products</button>
+                <button class="prod-tab" data-filter="spices"><i class="fas fa-leaf"></i> Spices &amp; Agriculture</button>
+                <button class="prod-tab" data-filter="industrial"><i class="fas fa-industry"></i> Industrial</button>
             </div>
+
+            <!-- SPICES CATEGORY -->
+            <div class="prod-category reveal" data-cat-group="spices">
+                <div class="prod-category-header">
+                    <div class="prod-cat-pill spices-pill"><i class="fas fa-leaf"></i> Spices &amp; Agriculture</div>
+                    <p class="prod-cat-intro">Farm-fresh Indian spices and turmeric sourced directly from Tamil Nadu&rsquo;s prime growing belt. FSSAI compliant, export-documented.</p>
+                </div>
+                <div class="prod-showcase-row">
+
+                    <!-- TURMERIC -->
+                    <a href="pages/turmeric.html" class="prod-showcase-card" data-cat="spices">
+                        <div class="psc-visual turmeric-bg">
+                            <span class="psc-featured-tag"><i class="fas fa-star"></i> Featured</span>
+                            <div class="psc-icon-wrap">
+                                <i class="fas fa-seedling psc-icon"></i>
+                            </div>
+                            <div class="psc-visual-footer">
+                                <span class="psc-origin"><i class="fas fa-map-marker-alt"></i> Erode, Tamil Nadu</span>
+                            </div>
+                        </div>
+                        <div class="psc-body">
+                            <h3 class="psc-name">Erode Turmeric</h3>
+                            <p class="psc-desc">Premium polished fingers, dried cuts &amp; high-curcumin powder directly from Tamil Nadu&rsquo;s prime growing belt.</p>
+                            <div class="psc-tags">
+                                <span><i class="fas fa-check-circle"></i> Polished Fingers</span>
+                                <span><i class="fas fa-check-circle"></i> Bulk Powder</span>
+                                <span><i class="fas fa-check-circle"></i> High Curcumin</span>
+                                <span><i class="fas fa-check-circle"></i> Custom Grade</span>
+                            </div>
+                            <div class="psc-footer">
+                                <span class="psc-cert"><i class="fas fa-certificate"></i> FSSAI Compliant</span>
+                                <span class="psc-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- INDIAN SPICES -->
+                    <a href="pages/spices.html" class="prod-showcase-card" data-cat="spices">
+                        <div class="psc-visual spices-bg">
+                            <span class="psc-badge"><i class="fas fa-leaf"></i> Agricultural</span>
+                            <div class="psc-icon-wrap">
+                                <i class="fas fa-pepper-hot psc-icon"></i>
+                            </div>
+                            <div class="psc-visual-footer">
+                                <span class="psc-origin"><i class="fas fa-map-marker-alt"></i> South India</span>
+                            </div>
+                        </div>
+                        <div class="psc-body">
+                            <h3 class="psc-name">Indian Spices</h3>
+                            <p class="psc-desc">Red Chilli, Black Pepper, Coriander &amp; spice blends &mdash; whole and powdered, freshly sourced for bulk export.</p>
+                            <div class="psc-tags">
+                                <span><i class="fas fa-check-circle"></i> Red Chilli</span>
+                                <span><i class="fas fa-check-circle"></i> Black Pepper</span>
+                                <span><i class="fas fa-check-circle"></i> Coriander</span>
+                                <span><i class="fas fa-check-circle"></i> Spice Blends</span>
+                            </div>
+                            <div class="psc-footer">
+                                <span class="psc-cert"><i class="fas fa-globe"></i> Export Ready</span>
+                                <span class="psc-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- INDUSTRIAL CATEGORY -->
+            <div class="prod-category reveal" data-cat-group="industrial">
+                <div class="prod-category-header">
+                    <div class="prod-cat-pill industrial-pill"><i class="fas fa-industry"></i> Industrial &mdash; Plastic Storage</div>
+                    <p class="prod-cat-intro">ISI-certified and food-grade plastic storage solutions sourced from verified manufacturers across India. Custom capacities available for export.</p>
+                </div>
+                <div class="prod-showcase-row">
+
+                    <!-- WATER TANKS -->
+                    <a href="pages/tanks.html" class="prod-showcase-card" data-cat="industrial">
+                        <div class="psc-visual tanks-bg">
+                            <span class="psc-badge"><i class="fas fa-certificate"></i> ISI Certified</span>
+                            <div class="psc-icon-wrap">
+                                <i class="fas fa-database psc-icon"></i>
+                            </div>
+                            <div class="psc-visual-footer">
+                                <span class="psc-origin"><i class="fas fa-ruler-combined"></i> 500 L &ndash; 10,000 L+</span>
+                            </div>
+                        </div>
+                        <div class="psc-body">
+                            <h3 class="psc-name">Water Storage Tanks</h3>
+                            <p class="psc-desc">HDPE water tanks for residential, commercial &amp; industrial use. Triple-layer UV-stabilised, overhead &amp; underground variants.</p>
+                            <div class="psc-tags">
+                                <span><i class="fas fa-check-circle"></i> Triple-Layer UV</span>
+                                <span><i class="fas fa-check-circle"></i> Overhead Type</span>
+                                <span><i class="fas fa-check-circle"></i> Underground Type</span>
+                                <span><i class="fas fa-check-circle"></i> Food-Grade Plastic</span>
+                            </div>
+                            <div class="psc-footer">
+                                <span class="psc-cert"><i class="fas fa-shield-alt"></i> ISI &bull; ISO 9001</span>
+                                <span class="psc-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- DRUMS & BARRELS -->
+                    <a href="pages/drums.html" class="prod-showcase-card" data-cat="industrial">
+                        <div class="psc-visual drums-bg">
+                            <span class="psc-badge"><i class="fas fa-industry"></i> Industrial</span>
+                            <div class="psc-icon-wrap">
+                                <i class="fas fa-oil-can psc-icon"></i>
+                            </div>
+                            <div class="psc-visual-footer">
+                                <span class="psc-origin"><i class="fas fa-ruler-combined"></i> 80 L &ndash; 300 L</span>
+                            </div>
+                        </div>
+                        <div class="psc-body">
+                            <h3 class="psc-name">Drums &amp; Barrels</h3>
+                            <p class="psc-desc">Food-grade &amp; chemical-grade HDPE drums with tight-seal lids. Custom branding &amp; UN-approved variants available for global export.</p>
+                            <div class="psc-tags">
+                                <span><i class="fas fa-check-circle"></i> Food-Grade</span>
+                                <span><i class="fas fa-check-circle"></i> Chemical-Grade</span>
+                                <span><i class="fas fa-check-circle"></i> Tight-Seal Lid</span>
+                                <span><i class="fas fa-check-circle"></i> Custom Branding</span>
+                            </div>
+                            <div class="psc-footer">
+                                <span class="psc-cert"><i class="fas fa-check-double"></i> UN Approved Avail.</span>
+                                <span class="psc-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
         </section>
 
         <!-- SERVICES -->

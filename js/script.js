@@ -160,6 +160,26 @@ serviceItems.forEach(item => {
     });
 });
 
+//  PRODUCT FILTER TABS 
+const prodTabs = document.querySelectorAll('.prod-tab');
+const prodCategories = document.querySelectorAll('.prod-category');
+
+prodTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        prodTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.getAttribute('data-filter');
+        prodCategories.forEach(cat => {
+            const group = cat.getAttribute('data-cat-group');
+            if (filter === 'all' || filter === group) {
+                cat.classList.remove('cat-hidden');
+            } else {
+                cat.classList.add('cat-hidden');
+            }
+        });
+    });
+});
+
 // ========= CONTACT FORM VALIDATION ========= 
 const contactForm = document.getElementById('contactForm');
 const formStatusMessage = document.getElementById('formStatusMessage');
